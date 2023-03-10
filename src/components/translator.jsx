@@ -3,8 +3,6 @@
 
 import { useEffect, useState } from "react";
 import translate from "translate";
-//import { Locale } from "free-translate/dist/types/locales";
-
 
 
 const Translator= ({
@@ -14,7 +12,6 @@ const Translator= ({
 }) => {
   const [translatedWord, setTranslatedWord] = useState("");
 
-  console.log("translater run")
   useEffect(() => {
     setTranslatedWord('')
     if(word=='there is no word now xd xd xd' ){
@@ -30,7 +27,7 @@ const Translator= ({
 
   return (
     <div>
-      {word.length>0&&<p className="text-slate-400 text-2xl font-semibold">{translatedWord}</p>}
+      {<p className="text-slate-400 text-2xl font-semibold">{translatedWord}</p>}
     </div>
   );
 };

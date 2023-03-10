@@ -13,7 +13,6 @@ export default function Home() {
   const [word, setWord] = useState("");
   const [fromLanguage, setFromLanguage] = useState("en");
   const [toLanguage, setToLanguage] = useState("fr");
-  const [showTranslation, setShowTranslation] = useState(false);
   const [isClient,setIsClient]=useState(false)
   useEffect(() => {
     if(typeof window != 'undefined'){
@@ -37,9 +36,7 @@ export default function Home() {
     setToLanguage(event.target.value);
   };
 
-  const handleTranslateClick = () => {
-    setShowTranslation(true);
-  };
+
 
   return (
     <>
